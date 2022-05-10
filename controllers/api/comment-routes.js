@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
-// get all commenys
+// get all comments
 router.get('/', (req, res) => {
     Comment.findAll()
     .then(dbCommentData => res.json(dbCommentData))
